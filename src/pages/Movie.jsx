@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from "axios";
+import { Card } from '../components/UI/Card';
 
 export const Movie = () => {
 
@@ -25,11 +26,13 @@ export const Movie = () => {
         getMovieData();
     }, []);
 
-  return <ul>
+  return (
+    <ul>
     {
       data.map((curElem) => {
-        return <Card key={curElem.imdbID} />
+        return <Card key={curElem.imdbID} movieData={curElem} />;
       })
     }
   </ul>
+  ); 
 };

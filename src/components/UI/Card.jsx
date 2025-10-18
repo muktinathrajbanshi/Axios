@@ -1,9 +1,10 @@
-export const card = () => {
+export const Card = ({movieData}) => {
+    const {Poster, imdbID} = movieData;
     return (
         <li className="hero-container">
             <div className="main-container">
                 <div className="poster-container">
-                    <img src="" alt="" />
+                    <img src={Poster} alt={imdbID} />
                 </div>
                 <div className="ticket-container">
                     <div className="ticket__content">
