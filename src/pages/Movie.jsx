@@ -9,6 +9,16 @@ export const Movie = () => {
 
     // const res = axios.get(API);
 
+    const getMovieData = () => {
+      try {
+        const res = await axios.get(API)
+        
+      } catch (error) {
+        console.log(error);
+        
+      }
+    }
+
     useEffect(() => {
         getMovieData();
     }, []);
