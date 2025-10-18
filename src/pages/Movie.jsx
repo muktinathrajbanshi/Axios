@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from "axios";
 import { Card } from '../components/UI/Card';
+import "../App.css";
 
 export const Movie = () => {
 
@@ -27,7 +28,7 @@ export const Movie = () => {
     }, []);
 
   return (
-    <ul>
+    <ul className="container grid grid-four--cols">
     {
       data.map((curElem) => {
         return <Card key={curElem.imdbID} movieData={curElem} />;
