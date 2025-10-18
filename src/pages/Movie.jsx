@@ -25,5 +25,11 @@ export const Movie = () => {
         getMovieData();
     }, []);
 
-  return <h1>Movie</h1>;
+  return <ul>
+    {
+      data.map((curElem) => {
+        return <Card key={curElem.imdbID} />
+      })
+    }
+  </ul>
 };
