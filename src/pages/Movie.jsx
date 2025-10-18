@@ -1,17 +1,19 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from "axios";
 
 export const Movie = () => {
 
+  const [data, setData] = useState([]);
+
     const API = 
-    "https://www.omdbapi.com/?i=tt3896198&
-    apikey=1c12799f&s=titanic&page=1";
+    "https://www.omdbapi.com/?i=tt3896198&apikey=1c12799f&s=titanic&page=1";
 
-    // const res = axios.get(API);
 
-    const getMovieData = () => {
+    const getMovieData = async () => {
       try {
-        const res = await axios.get(API)
+        const res = await axios.get(API);
+        console.log(res.data.Search);
+        setData(res.data.Search);
         
       } catch (error) {
         console.log(error);
