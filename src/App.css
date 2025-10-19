@@ -13,11 +13,23 @@
   flex-direction: column;
 }
 
-.grid {
-  margin: 1rem;
+li {
+  list-style: none;
+}
+
+img {
+  width: 90%;
+  height: 95%;
 }
 
 .grid-four--cols {
+  width: 100%;
+  margin: 1rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+}
+
+button {
+  width: 90%;
+  padding: 0.5rem 1rem;
 }
