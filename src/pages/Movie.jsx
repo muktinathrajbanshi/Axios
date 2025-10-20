@@ -19,9 +19,8 @@ export const Movie = () => {
         
       } catch (error) {
         console.error("Error message:", error.message);
-        console.log("Error status:", error.response.status);
-        console.log("Error data:", error.response.data);
-        
+        console.error("Error status:", error.response.status);
+        console.error("Error data:", error.response.data);
       }
     }
 
