@@ -18,7 +18,9 @@ export const Movie = () => {
         setData(res.data.Search);
         
       } catch (error) {
-        console.log(error);
+        console.error("Error message:", error.message);
+        console.log("Error status:", error.response.status);
+        console.log("Error data:", error.response.data);
         
       }
     }
